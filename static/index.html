@@ -1,0 +1,92 @@
+<!--
+  Creditst:
+
+  Canvas sheet by Molly @ https://codepen.io/mollyrd/pen/pJwpee
+-->
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8">
+    
+    <title>Deep MNIST</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link rel="stylesheet" href="css/gui.css">
+  </head>
+  <body>
+    
+    <nav class="navbar-fixed blue darken-1">
+
+      <div class="nav-wrapper">
+
+        <a href="#" class="brand-logo">Deep MNIST</a>
+
+      </div>
+
+    </nav>
+          
+    <div class="content">
+      <div class="stats">
+
+        <canvas id="sheet" width="400" height="400"></canvas>
+
+        <div id="output">
+
+          <div id="loader" style="display: none">
+
+            <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="predictions">
+
+            <div id="chart_div" style="height: 300px; width: 398px"></div>
+
+            <div id="pred"></div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="btns">
+
+        <a class="waves-effect waves-light btn" id="predict-btn">Predict</a>
+
+        <a class="waves-effect waves-light btn" id="clear-btn">Clear</a>
+
+      </div>
+      
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="js/sheet.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <script src="js/httpRequests.js"></script>
+
+    <script src="js/chart.js"></script>
+
+  </body>
+</html>
+
+
+

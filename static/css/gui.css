@@ -1,0 +1,59 @@
+.content{
+  margin: 20px 5px 0 5px;
+}
+
+.stats {
+  display: block;
+  width: auto;
+  margin: auto;
+}
+
+#sheet {
+  cursor: crosshair;
+  border: 1px solid #333;
+}
+
+#output{
+  height: 400px;
+  width: 400px;
+  border: 1px solid #333;
+  margin: 0;
+  text-align: center;
+}
+
+#loader, #predictions {
+  width: 400px;
+  height: 400px;
+}
+#loader {
+  transition: 1s;
+  padding: 165px;
+  position: absolute;
+  z-index: 50;
+  background: rgba(0,0,0,.25);
+}
+#predictions {
+  vertical-align:middle;
+  display: table-cell;
+}
+
+.btns{
+  text-align: center;
+  margin-top: 20px
+}
+
+.btns #clear-btn{
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 768px){
+  .stats  {
+    display: flex;
+    width: 1000px;
+    margin-left: calc((100vw - 1000px) / 2);
+  }
+
+  #output {
+    margin-left: 200px;
+  }
+}
