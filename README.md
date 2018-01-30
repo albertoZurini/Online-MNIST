@@ -15,7 +15,7 @@ flask_cors
 opencv
 numpy
 json
-KEras
+Keras
 Tensorflow
 PILLOW (PIL)
 base64
@@ -23,7 +23,9 @@ StringIO (io)
 
 # How to run
 
-After you have installed all required libraries, run the main script with:
+After you have installed all required libraries, enable the environment and run the main script
+
+source activate webDL
 
 python main.py
 
