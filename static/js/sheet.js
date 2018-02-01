@@ -4,7 +4,7 @@ var canvas = document.getElementById('sheet');
 context = canvas.getContext("2d");
 context.strokeStyle = "#000000";
 context.lineJoin = "round";
-context.lineWidth = 50;
+context.lineWidth = 40;
 
 context.fillStyle = "white";
 context.fillRect(0, 0, canvas.width, canvas.height);

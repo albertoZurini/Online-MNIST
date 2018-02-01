@@ -1,6 +1,9 @@
 from flask import Flask, request, send_from_directory, Response
 from flask_cors import CORS, cross_origin
 
+from keras.datasets import mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
 import cv2
 import numpy as np
 import json
@@ -20,6 +23,7 @@ def predict():
   img = image.getImg(img) # Converts into RGB
 
   img = cv2.resize(img, (28, 28)) # Resize the image for the neural network
+  img = 255 - img # Black = white and vice versa
 
   prediction = nn.getStasFromImageNumber(img) # Predict the number
   num = nn.catToNum(prediction) # Extract the number
@@ -39,4 +43,4 @@ def root():
   return app.send_static_file('index.html')
 
 if __name__ == '__main__':
-  app.run(debug=False)
+  app.run(host='0.0.0.0', port=5000, debug=False)
