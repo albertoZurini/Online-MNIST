@@ -10,16 +10,16 @@ conda env create -f webDL.yml
 
 If you don't have a compatible GPU install the following packages via pip or similar:
 
-Flask
-flask_cors
-opencv
-numpy
-json
-Keras
-Tensorflow
-PILLOW (PIL)
-base64
-StringIO (io)
+- Flask
+- flask_cors
+- opencv
+- numpy
+- json
+- Keras
+- Tensorflow
+- PILLOW (PIL)
+- base64
+- StringIO (io)
 
 # How to run
 
