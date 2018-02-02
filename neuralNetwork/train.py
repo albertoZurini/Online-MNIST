@@ -74,11 +74,15 @@ model.add(Dense(512, activation='relu'))
 model.add(Dropout(0.2))
 model.add(Dense(num_classes, activation='softmax'))
 '''
-model.add(Conv2D(32, kernel_size=(3, 3),
+model.add(Conv2D(32, kernel_size=(5, 5),
                  activation='relu',
                  input_shape=input_shape))
-model.add(Conv2D(64, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(3, 3), padding='same'))
+model.add(Conv2D(64, (4, 4), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2), padding='same'))
+model.add(Conv2D(128, (3, 3), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2), padding='same'))
+model.add(Conv2D(256, (2, 2), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2), padding='same'))
 
 model.add(Dropout(0.25))
 model.add(Flatten())

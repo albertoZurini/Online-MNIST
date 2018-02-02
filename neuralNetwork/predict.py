@@ -26,7 +26,7 @@ loaded_model.compile(loss=keras.losses.categorical_crossentropy,
               metrics=['accuracy'])
 
 # Check if the model is ok
-
+'''
 from keras.datasets import mnist
 
 num_classes = 10
@@ -52,7 +52,7 @@ y_test = keras.utils.to_categorical(y_test, num_classes)
 score = loaded_model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
-
+'''
 
 # Return the array of NN predictions
 def getStasFromImageNumber(img):
