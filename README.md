@@ -11,7 +11,7 @@ To check if the GPU is correctly being used, run `nvidia-smi` on a terminal and 
 
 `conda env create -f webDL-GPU.yml`
 
-If you don't have Anaconda install the following packages via pip or similar:
+If you don't have Anaconda, install the following packages via pip or similar:
 
 - Flask
 - flask_cors
