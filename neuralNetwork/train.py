@@ -8,6 +8,8 @@ from keras.models import model_from_json
 import numpy as np
 import cv2
 
+import nnSettings
+
 batch_size = 128
 num_classes = 10
 epochs = 5
@@ -35,9 +37,9 @@ cv2.destroyAllWindows()
 quit()
 '''
 
-usingMLP = False
+#usingMLP = False
 
-if usingMLP:
+if nnSettings.usingMLP:
     # Reshape each image in the form
     # [batch, flattenImageSize]
     x_train = x_train.reshape(x_train.shape[0], img_rows*img_cols)
@@ -67,13 +69,7 @@ y_test = keras.utils.to_categorical(y_test, num_classes)
 
 # Begin model
 model = Sequential()
-'''
-model.add(Dense(512, input_shape=input_shape, activation='relu'))
-model.add(Dropout(0.2))
-model.add(Dense(512, activation='relu'))
-model.add(Dropout(0.2))
-model.add(Dense(num_classes, activation='softmax'))
-'''
+
 model.add(Conv2D(32, kernel_size=(5, 5),
                  activation='relu',
                  input_shape=input_shape))
