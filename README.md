@@ -4,11 +4,14 @@ Online MNIST is a Web App which, with the help of CNNs, can predict the number y
 
 # How to install
 
-Install the conda environment. Note that the envyronment uses tensorflow-gpu, so if you want to install this environment you will have to install CUDA & CuDNN.
+Install the conda environment. If you have a compatible GPU, install the GPU environment else the CPU. If for any reasons the GPU env doesn't work, try installing CUDA and CUDnn, following the tutorial on https://www.tensorflow.org/install/. 
+To check if the GPU is correctly being used, run 'nvidia-smi' on a terminal and check if Python is listed and all the RAM of the GPU is used.
 
-conda env create -f webDL.yml
+'conda env create -f webDL-CPU.yml'
 
-If you don't have a compatible GPU install the following packages via pip or similar:
+'conda env create -f webDL-GPU.yml'
+
+If you don't have Anaconda install the following packages via pip or similar:
 
 - Flask
 - flask_cors
@@ -23,10 +26,12 @@ If you don't have a compatible GPU install the following packages via pip or sim
 
 # How to run
 
-After you have installed all required libraries, enable the environment and run the main script
+After you have installed the environment, enable it:
 
-source activate webDL
+'source activate webDL'
 
-python main.py
+and run the main script:
+
+'python main.py'
 
 Then open your browser and go to http://127.0.0.1:5000
